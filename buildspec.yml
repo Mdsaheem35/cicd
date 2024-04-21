@@ -11,7 +11,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - sudo service start httpd
+      - sudo service httpd start
 artifacts:
   files:
     - /var/www/html/index.html
