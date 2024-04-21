@@ -1,0 +1,17 @@
+version: 1.0
+
+phases:
+  install:
+    commands:
+      - sudo yum install httpd -y
+  build:
+    commands:
+      - cp index.html /var/www/html/
+      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - sudo service start httpd
+artifacts:
+  files:
+    - /var/www/html/index.html
