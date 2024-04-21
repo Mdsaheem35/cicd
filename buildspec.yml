@@ -7,11 +7,12 @@ phases:
   build:
     commands:
       - cp index.html /var/www/html/
+      - sudo service httpd start  
       
   post_build:
     commands:
       - echo Build completed on `date`
-      - sudo service httpd start
+    
 artifacts:
   files:
     - /var/www/html/index.html
