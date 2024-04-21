@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - cp index.html /var/www/html/
-      - sudo service httpd start  
+    
       
   post_build:
     commands:
